@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="/"><i class="far fa-sticky-note"></i> Notes App!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Caracteristicas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Acerca de</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {{#if user}}
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Notes!
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/notes/add">Nueva</a>
+                        <a class="dropdown-item" href="/notes">Ver todas</a>
+                        <a class="dropdown-item" href="/users/logout">Cerrar Sesion</a>
+                    </div>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a href="/users/signin" class="nav-link">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/users/signup" class="nav-link">Registrarse</a>
+                </li>
+                {{/if}}
+            </ul>
+
+        </div>
+    </div>
+</nav>
