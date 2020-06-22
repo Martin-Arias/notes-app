@@ -1,6 +1,7 @@
 //Archivo principal del proyecto
 
 require('dotenv').config();//Se utiliza para configurar las variables de entorno
+
 const app = require('./server'); //Importo el servidor 
 
 require('./database');
